@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <ripple android:color="?android:colorControlHighlight">
+            <item android:id="@android:id/mask">
+                <shape>
+                    <solid android:color="?android:colorAccent"/>
+                    <corners android:radius="16dp"/>
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <stroke android:color="@color/white" android:width="2dp"/>
+                    <gradient android:startColor="#FF2C7286" android:endColor="#FF334672"/>
+                    <corners android:radius="16dp"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <stroke android:color="@color/white" android:width="2dp"/>
+            <solid android:color="#FFC5C5C5"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/privacy_policy_bg">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/back_button_text_info"
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/image_button_ripple"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button" />
+
+    <TextView
+        android:id="@+id/balanceInfo"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:background="@drawable/info_bg"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="@string/balance_info_bar"
+
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+    <ImageView
+        android:id="@+id/rouletteBackPart"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/empty_string"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:srcCompat="@drawable/roulette_back_part" />
+
+    <ImageView
+        android:id="@+id/rouletteSections"
+        android:rotation="4"
+        android:layout_width="239.75dp"
+        android:layout_height="238.88dp"
+        android:contentDescription="@string/empty_string"
+        app:layout_constraintBottom_toBottomOf="@+id/rouletteBackPart"
+        app:layout_constraintEnd_toEndOf="@+id/rouletteBackPart"
+        app:layout_constraintStart_toStartOf="@+id/rouletteBackPart"
+        app:layout_constraintTop_toTopOf="@+id/rouletteBackPart"
+        app:srcCompat="@drawable/roulette_sectors" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/empty_string"
+        app:layout_constraintBottom_toBottomOf="@+id/rouletteBackPart"
+        app:layout_constraintEnd_toEndOf="@+id/rouletteBackPart"
+        app:layout_constraintStart_toStartOf="@+id/rouletteBackPart"
+        app:layout_constraintTop_toTopOf="@+id/rouletteBackPart"
+        app:srcCompat="@drawable/roulette_center" />
+
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5.25dp"
+        android:contentDescription="@string/empty_string"
+        app:layout_constraintEnd_toEndOf="@+id/rouletteBackPart"
+        app:layout_constraintStart_toStartOf="@+id/rouletteBackPart"
+        app:layout_constraintTop_toTopOf="@+id/rouletteBackPart"
+        app:srcCompat="@drawable/roulette_arrow" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/action_buttons_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rouletteBackPart">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/minusButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/minus_button_text"
+                android:foreground="@drawable/image_button_ripple"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/minus_button" />
+
+            <TextView
+                android:id="@+id/betInfo"
+                android:layout_width="140dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_height="48dp"
+                android:background="@drawable/info_bg"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="@string/bet_info_bar"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@+id/backButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+            <ImageButton
+                android:id="@+id/plusButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/plus_button_text"
+                android:foreground="@drawable/image_button_ripple"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/plus_button" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/stopButton"
+                android:layout_width="62dp"
+                android:layout_height="50dp"
+                android:text="@string/stop_button_text"
+                android:enabled="false"
+                android:background="@drawable/auto_spin_bg"/>
+
+            <ImageButton
+                android:id="@+id/spinButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="8dp"
+                android:contentDescription="@string/plus_button_text"
+                android:foreground="@drawable/round_ripple"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/spin_button" />
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/autoSpinButton"
+                android:layout_width="62dp"
+                android:layout_height="50dp"
+                android:text="@string/auto_spin_button_text"
+                android:background="@drawable/auto_spin_bg"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
