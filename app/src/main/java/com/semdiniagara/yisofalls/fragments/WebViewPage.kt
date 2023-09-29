@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.fragments
+package com.semdiniagara.yisofalls.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import androidx.fragment.app.Fragment
-import one.two.niagarafallsgames.R
+import com.semdiniagara.yisofalls.R
 import android.content.Intent
 import android.net.Uri
 import android.provider.MediaStore
@@ -17,7 +17,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
-import one.two.niagarafallsgames.help.*
+import com.semdiniagara.yisofalls.help.*
 import java.io.File
 import java.io.IOException
 import java.net.URL
@@ -44,7 +44,7 @@ class WebViewPage: Fragment() {
         if(fragmentWebView.settings.run {
             allowFileAccess == domStorageEnabled
             }) {
-            val url = URL(Firebase.remoteConfig.getString("url"))
+            val url = URL(Firebase.remoteConfig.getString(LoadingViewPage.VAR_LINK))
             fragmentWebView.loadUrl(url.toString())
         }
     }

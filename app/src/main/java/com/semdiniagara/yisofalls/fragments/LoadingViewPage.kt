@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.fragments
+package com.semdiniagara.yisofalls.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -10,11 +10,12 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.FirebaseApp
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.onesignal.OneSignal
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
-import one.two.niagarafallsgames.MainApp
-import one.two.niagarafallsgames.R
-import one.two.niagarafallsgames.navigation.goTo
+import com.semdiniagara.yisofalls.MainApp
+import com.semdiniagara.yisofalls.R
+import com.semdiniagara.yisofalls.navigation.goTo
 import kotlin.concurrent.thread
 
 class LoadingViewPage: Fragment() {
@@ -33,18 +34,21 @@ class LoadingViewPage: Fragment() {
             FirebaseApp.initializeApp(requireContext())
 
             val config = Firebase.remoteConfig
-            val urlToAllow: Pair<String, Boolean>
+            val varLinkToVarLet: Pair<String, Boolean>
             runBlocking {
+
+                OneSignal.Notifications.requestPermission(true)
+
                 config.reset().await()
                 config.fetchAndActivate().await()
-                urlToAllow = config.getString("url") to config.getBoolean("allow")
+                varLinkToVarLet = config.getString(VAR_LINK) to config.getBoolean(VAR_LET)
             }
-            if(urlToAllow.second && urlToAllow.first.isNotEmpty()) {
-                Log.i("Firebase check", "Allow is true, url is ${urlToAllow.first}")
+            if(varLinkToVarLet.second && varLinkToVarLet.first.isNotEmpty()) {
+                Log.i("Firebase check", "Var let is true, var link is ${varLinkToVarLet.first}")
                 goTo(WebViewPage())
             }
             else {
-                Log.i("Firebase check", "Allow is ${urlToAllow.second}, url is ${urlToAllow.first}")
+                Log.i("Firebase check", "Var let is ${varLinkToVarLet.second}, var link is ${varLinkToVarLet.first}")
                 view.handler.post {
                     (requireActivity() as MainApp).gameFragma.changeBalance(getBalance())
                 }
@@ -65,5 +69,10 @@ class LoadingViewPage: Fragment() {
         else {
             balance
         }
+    }
+
+    companion object {
+        const val VAR_LINK = "var_link"
+        const val VAR_LET = "var_let"
     }
 }

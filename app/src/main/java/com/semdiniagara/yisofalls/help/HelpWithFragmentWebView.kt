@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.help
+package com.semdiniagara.yisofalls.help
 
 import android.webkit.CookieManager
 import android.webkit.WebSettings

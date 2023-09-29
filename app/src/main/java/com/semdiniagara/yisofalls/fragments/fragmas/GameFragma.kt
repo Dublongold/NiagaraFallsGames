@@ -1,9 +1,8 @@
-package one.two.niagarafallsgames.fragments.fragmas
+package com.semdiniagara.yisofalls.fragments.fragmas
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import java.net.URL
 
 class GameFragma: ViewModel() {
     private val pBet = MutableLiveData(10)

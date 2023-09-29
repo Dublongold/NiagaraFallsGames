@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.fragments
+package com.semdiniagara.yisofalls.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import one.two.niagarafallsgames.R
+import com.semdiniagara.yisofalls.R
 import kotlin.concurrent.thread
 
 class RouletteViewPage: GameViewPage(), CanDoSpin {

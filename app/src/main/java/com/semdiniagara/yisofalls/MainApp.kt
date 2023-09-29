@@ -1,15 +1,16 @@
-package one.two.niagarafallsgames
+package com.semdiniagara.yisofalls
 
 import android.os.Bundle
 import android.view.WindowManager
 import android.webkit.WebView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
-import one.two.niagarafallsgames.fragments.LoadingViewPage
-import one.two.niagarafallsgames.fragments.MenuViewPage
-import one.two.niagarafallsgames.fragments.WebViewPage
-import one.two.niagarafallsgames.fragments.fragmas.GameFragma
-import one.two.niagarafallsgames.navigation.goTo
+import com.onesignal.OneSignal
+import com.semdiniagara.yisofalls.fragments.LoadingViewPage
+import com.semdiniagara.yisofalls.fragments.MenuViewPage
+import com.semdiniagara.yisofalls.fragments.WebViewPage
+import com.semdiniagara.yisofalls.fragments.fragmas.GameFragma
+import com.semdiniagara.yisofalls.navigation.goTo
 
 
 class MainApp : AppCompatActivity() {
@@ -41,6 +42,8 @@ class MainApp : AppCompatActivity() {
                 finish()
             }
         })
+
+        OneSignal.initWithContext(applicationContext, getString(R.string.one_s))
 
         supportFragmentManager.beginTransaction()
             .add(R.id.mainFragmentContainer, LoadingViewPage())

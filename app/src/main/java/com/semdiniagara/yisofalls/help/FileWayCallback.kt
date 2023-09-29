@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.help
+package com.semdiniagara.yisofalls.help
 
 import android.net.Uri
 import android.webkit.ValueCallback

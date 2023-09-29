@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.fragments
+package com.semdiniagara.yisofalls.fragments
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
-import one.two.niagarafallsgames.MainApp
-import one.two.niagarafallsgames.R
-import one.two.niagarafallsgames.fragments.fragmas.GameFragma
-import one.two.niagarafallsgames.navigation.goTo
+import com.semdiniagara.yisofalls.MainApp
+import com.semdiniagara.yisofalls.R
+import com.semdiniagara.yisofalls.fragments.fragmas.GameFragma
+import com.semdiniagara.yisofalls.navigation.goTo
 
 abstract class GameViewPage: Fragment() {
     protected lateinit var gameFragma: GameFragma

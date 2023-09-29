@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.fragments
+package com.semdiniagara.yisofalls.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
-import one.two.niagarafallsgames.R
-import one.two.niagarafallsgames.navigation.goTo
+import com.semdiniagara.yisofalls.R
+import com.semdiniagara.yisofalls.navigation.goTo
 
 class MenuViewPage: Fragment() {
 

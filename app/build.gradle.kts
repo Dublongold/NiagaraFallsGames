@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "one.two.niagarafallsgames"
+    namespace = "com.semdiniagara.yisofalls"
     compileSdk = 34
 
     defaultConfig {
         renderscriptSupportModeEnabled = true
-        applicationId = "one.two.niagarafallsgames"
+        applicationId = "com.semdiniagara.yisofalls"
         minSdk = 24
         //noinspection EditedTargetSdkVersion
         targetSdk = 34
@@ -46,6 +46,9 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
+    // Fuel
+    implementation("com.github.kittinunf.fuel:fuel:2.3.1")
+    // Test
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     // Firebase dependencies

@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames
+package com.semdiniagara.yisofalls
 
 import org.junit.Test
 

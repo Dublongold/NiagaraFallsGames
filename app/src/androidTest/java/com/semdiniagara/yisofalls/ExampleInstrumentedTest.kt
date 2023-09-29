@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames
+package com.semdiniagara.yisofalls
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

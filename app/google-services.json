@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "979052901216",
-    "project_id": "bitgames-ffde7",
-    "storage_bucket": "bitgames-ffde7.appspot.com"
+    "project_number": "1050226433710",
+    "project_id": "fall-in-niagara",
+    "storage_bucket": "fall-in-niagara.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:979052901216:android:4e28869fd320185bdce405",
+        "mobilesdk_app_id": "1:1050226433710:android:e05fdf38b1cbcbbec4973f",
         "android_client_info": {
-          "package_name": "one.two.niagarafallsgames"
+          "package_name": "com.semdiniagara.yisofalls"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCPPwpdt0mmHmbZF8oQn36A2o7Qmu87r8Y"
+          "current_key": "AIzaSyAANDVACwRa9Y2mTvUxNR682XSiYuWR5D4"
         }
       ],
       "services": {

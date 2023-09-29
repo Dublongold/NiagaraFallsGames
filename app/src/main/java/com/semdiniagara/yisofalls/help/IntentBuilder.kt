@@ -1,4 +1,4 @@
-package one.two.niagarafallsgames.help
+package com.semdiniagara.yisofalls.help
 
 import android.content.Intent
 import android.os.Parcelable

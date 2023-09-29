@@ -1,8 +1,7 @@
-package one.two.niagarafallsgames.help
+package com.semdiniagara.yisofalls.help
 
 import android.app.Activity
 import android.os.Environment
-import androidx.appcompat.app.AppCompatActivity
 import java.io.File
 
 fun Activity.createTempImageFile(prefix: String): File {
